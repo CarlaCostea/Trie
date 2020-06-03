@@ -3526,11 +3526,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carla\\source\\TrieAutocompleteTests\\TrieAutocompleteTests.csproj",
+      "projectUniqueName": "C:\\Users\\carla\\source\\Trie\\TrieAutocompleteTests\\TrieAutocompleteTests.csproj",
       "projectName": "TrieAutocompleteTests",
-      "projectPath": "C:\\Users\\carla\\source\\TrieAutocompleteTests\\TrieAutocompleteTests.csproj",
+      "projectPath": "C:\\Users\\carla\\source\\Trie\\TrieAutocompleteTests\\TrieAutocompleteTests.csproj",
       "packagesPath": "C:\\Users\\carla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carla\\source\\TrieAutocompleteTests\\obj\\",
+      "outputPath": "C:\\Users\\carla\\source\\Trie\\TrieAutocompleteTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carla\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3546,8 +3546,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\carla\\source\\TrieAutocomplete\\TrieAutocomplete.csproj": {
-              "projectPath": "C:\\Users\\carla\\source\\TrieAutocomplete\\TrieAutocomplete.csproj"
+            "C:\\Users\\carla\\source\\Trie\\TrieAutocomplete\\TrieAutocomplete.csproj": {
+              "projectPath": "C:\\Users\\carla\\source\\Trie\\TrieAutocomplete\\TrieAutocomplete.csproj"
             }
           }
         }

@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "YX1sJg2QiHP81gDatvWm9s4UcxtaWvn/RXfpgdUkLdCQPJNI0ZCm4gsXcMg0tDnlHuAqxK3vwAxBhQ+AXmIeOQ==",
+  "dgSpecHash": "jisY9UhMT8Ayopr30wzpEbE/f4NsoEDEixhjS3TT2flSZFxqSIWVCJJjJYHltrpyVmfyhkgoRdQBX7qo7DlN8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carla\\source\\TrieAutocomplete\\TrieAutocomplete.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\carla\\source\\Trie\\TrieAutocomplete\\TrieAutocomplete.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\carla\\.nuget\\packages\\microsoft.codeanalysis.fxcopanalyzers\\3.0.0\\microsoft.codeanalysis.fxcopanalyzers.3.0.0.nupkg.sha512",
+    "C:\\Users\\carla\\.nuget\\packages\\microsoft.codeanalysis.versioncheckanalyzer\\3.0.0\\microsoft.codeanalysis.versioncheckanalyzer.3.0.0.nupkg.sha512",
+    "C:\\Users\\carla\\.nuget\\packages\\microsoft.codequality.analyzers\\3.0.0\\microsoft.codequality.analyzers.3.0.0.nupkg.sha512",
+    "C:\\Users\\carla\\.nuget\\packages\\microsoft.netcore.analyzers\\3.0.0\\microsoft.netcore.analyzers.3.0.0.nupkg.sha512",
+    "C:\\Users\\carla\\.nuget\\packages\\microsoft.netframework.analyzers\\3.0.0\\microsoft.netframework.analyzers.3.0.0.nupkg.sha512",
+    "C:\\Users\\carla\\.nuget\\packages\\roslynator.analyzers\\2.3.0\\roslynator.analyzers.2.3.0.nupkg.sha512",
+    "C:\\Users\\carla\\.nuget\\packages\\sonaranalyzer.csharp\\8.7.0.17535\\sonaranalyzer.csharp.8.7.0.17535.nupkg.sha512",
+    "C:\\Users\\carla\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
+  ],
   "logs": []
 }

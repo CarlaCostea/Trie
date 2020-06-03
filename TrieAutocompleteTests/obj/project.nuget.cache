@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sHHRBea3RE5dduCTsfQEQ6646enYDwKwdlwgqeLxQ8j0zqxtp3+f/oFVnalS0DnFb0RkaKq1tT/YO1kayjHOrw==",
+  "dgSpecHash": "WRXIboIAfVOHzi7bMwvoLZpfb1KWlV9ihH4Gnu3GUQ+E5wPiauWzakiv2OlxBQCXqEK9QDxKF2AohhEz/n3sYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carla\\source\\TrieAutocompleteTests\\TrieAutocompleteTests.csproj",
+  "projectFilePath": "C:\\Users\\carla\\source\\Trie\\TrieAutocompleteTests\\TrieAutocompleteTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carla\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\carla\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
