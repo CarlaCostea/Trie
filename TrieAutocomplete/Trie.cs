@@ -10,16 +10,17 @@ namespace TrieAutocomplete
 
         public Trie()
         {
-            root = root.GetNode();
+            root = new Node();
         }
 
         public void Add(string word)
         {
             if (word == null)
             {
-                return;
+                throw new ArgumentNullException(nameof(word), "word is null");
             }
 
+            AddToRoot(root, word);
             int alphabetIndex;
             Node parrent = root;
             for (int letterIndex = 0; letterIndex < word.Length; letterIndex++)
@@ -36,6 +37,30 @@ namespace TrieAutocomplete
             }
 
             parrent.EndOfWord = true;
+        }
+
+        private void AddToRoot(Node node, string remainingString)
+        {
+            if (remainingString.Length <= 0)
+            {
+                return;
+            }
+
+            char prefix = remainingString[0];
+            string substring = remainingString.Substring(1);
+
+            if (!node.GetNode.ContainsKey(prefix))
+            {
+                node.GetNode.Add(prefix, new Node());
+            }
+
+            if (substring.Length == 0)
+            {
+                node.GetNode[prefix].EndOfWord = true;
+                return;
+            }
+
+            AddToRoot(node.GetNode[prefix], substring);
         }
 
         public List<string> GetWords(string word)
