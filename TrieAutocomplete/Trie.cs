@@ -37,6 +37,8 @@ namespace TrieAutocomplete
                 {
                     return new string[0];
                 }
+
+                node = node.GetNode[character];
             }
 
             return GetChildWords(node);
@@ -54,7 +56,7 @@ namespace TrieAutocomplete
 
             if (!node.GetNode.ContainsKey(prefix))
             {
-                node.GetNode.Add(prefix, new Node(currentWord));
+                node.GetNode.Add(prefix, new Node(currentWord + prefix));
             }
 
             if (substring.Length == 0)
@@ -63,8 +65,7 @@ namespace TrieAutocomplete
                 return;
             }
 
-            currentWord = currentWord + prefix;
-            AddToRoot(node.GetNode[prefix], substring, currentWord);
+            AddToRoot(node.GetNode[prefix], substring, currentWord + prefix);
         }
 
         private IEnumerable<string> GetChildWords(Node node)
