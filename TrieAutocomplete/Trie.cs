@@ -37,5 +37,31 @@ namespace TrieAutocomplete
 
             parrent.EndOfWord = true;
         }
+
+        public List<string> GetWords(string word)
+        {
+            if (word == null)
+            {
+                throw new ArgumentNullException(nameof(word), "word is null");
+            }
+
+            List<string> result;
+            int alphabetIndex;
+            Node parrent = root;
+
+            for (int letterIndex = 0; letterIndex < word.Length; letterIndex++)
+            {
+                alphabetIndex = 'a' - word[letterIndex];
+
+                if (parrent.Children[alphabetIndex] == null)
+                {
+                    return null;
+                }
+
+                parrent = parrent.Children[alphabetIndex];
+            }
+
+            }
+        }
     }
 }

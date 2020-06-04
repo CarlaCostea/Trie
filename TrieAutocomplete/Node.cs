@@ -8,16 +8,17 @@ namespace TrieAutocomplete
     {
         public Node[] Children = new Node[AlphabetSize];
         const int AlphabetSize = 26;
-        private bool endOfWord;
 
         public Node()
         {
-            endOfWord = false;
+            EndOfWord = false;
             for (int i = 0; i < AlphabetSize; i++)
             {
                 Children[i] = null;
             }
         }
+
+        public bool EndOfWord { get; set; }
 
         public Node GetNode()
         {
