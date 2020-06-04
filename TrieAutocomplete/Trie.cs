@@ -10,7 +10,7 @@ namespace TrieAutocomplete
 
         public Trie()
         {
-            root = new Node();
+            root = new Node("");
         }
 
         public void Add(string word)
@@ -20,26 +20,29 @@ namespace TrieAutocomplete
                 throw new ArgumentNullException(nameof(word), "word is null");
             }
 
-            AddToRoot(root, word);
-            int alphabetIndex;
-            Node parrent = root;
-            for (int letterIndex = 0; letterIndex < word.Length; letterIndex++)
-            {
-                alphabetIndex = 'a' - word[letterIndex];
-                if (alphabetIndex < 0)
-                {
-                    break;
-                }
-
-                parrent.Children[alphabetIndex] ??= parrent.GetNode();
-
-                parrent = parrent.Children[alphabetIndex];
-            }
-
-            parrent.EndOfWord = true;
+            AddToRoot(root, word, "");
         }
 
-        private void AddToRoot(Node node, string remainingString)
+        public IEnumerable<string> GetWords(string parrentWord)
+        {
+            if (parrentWord == null)
+            {
+                throw new ArgumentNullException(nameof(parrentWord), "word is null");
+            }
+
+            Node node = root;
+            foreach (var character in parrentWord)
+            {
+                if (!node.GetNode.ContainsKey(character))
+                {
+                    return new string[0];
+                }
+            }
+
+            return GetChildWords(node);
+        }
+
+        private void AddToRoot(Node node, string remainingString, string currentWord)
         {
             if (remainingString.Length <= 0)
             {
@@ -51,7 +54,7 @@ namespace TrieAutocomplete
 
             if (!node.GetNode.ContainsKey(prefix))
             {
-                node.GetNode.Add(prefix, new Node());
+                node.GetNode.Add(prefix, new Node(currentWord));
             }
 
             if (substring.Length == 0)
@@ -60,32 +63,23 @@ namespace TrieAutocomplete
                 return;
             }
 
-            AddToRoot(node.GetNode[prefix], substring);
+            currentWord = currentWord + prefix;
+            AddToRoot(node.GetNode[prefix], substring, currentWord);
         }
 
-        public List<string> GetWords(string word)
+        private IEnumerable<string> GetChildWords(Node node)
         {
-            if (word == null)
+            if (node.EndOfWord)
             {
-                throw new ArgumentNullException(nameof(word), "word is null");
+                yield return node.Word;
             }
 
-            List<string> result;
-            int alphabetIndex;
-            Node parrent = root;
-
-            for (int letterIndex = 0; letterIndex < word.Length; letterIndex++)
+            foreach (var subNodes in node.GetNode)
             {
-                alphabetIndex = 'a' - word[letterIndex];
-
-                if (parrent.Children[alphabetIndex] == null)
+                foreach (var result in GetChildWords(subNodes.Value))
                 {
-                    return null;
+                    yield return result;
                 }
-
-                parrent = parrent.Children[alphabetIndex];
-            }
-
             }
         }
     }
